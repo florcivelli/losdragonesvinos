@@ -9,7 +9,7 @@ html {
 
 .container__principal {
     display: grid;
-    background-image: url(../Media/FONDO.JPG);
+    background-image: url(../media/FONDO.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     grid-template-columns: repeat(3, 3fr);
