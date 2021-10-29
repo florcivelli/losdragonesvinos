@@ -7,38 +7,68 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'charter';
+    src: url(fuentes/charter.ttf) format('truetype');
+}
+
 .container__principal {
     display: grid;
-    background-image: url(../media/FONDO.JPG);
+    background-image: url(../media/fondo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    grid-template-columns: repeat(3, 3fr);
-    grid-template-rows: 200px 200px 600px 200px;
+        
+    grid-template-rows: 200px 200px 800px 200px;
     grid-template-areas: 
     "header header header"
     "main main main"
     "section section aside"
     "footer footer footer";
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'charter';    
+}
+.container__vinos {
+    display: grid;
+    background-image: url(../media/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    grid-template-rows: 200px 800px 200px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    font-family: 'charter';    
+}
+
+.container__contacto {
+    display: grid;   
+    background-image: url(../media/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'charter';
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 200px 800px 200px;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
 }
 /*menú y logo*/
 .header__principal {
     display: flex;
     grid-area: header;
-    flex-direction: row;   
+    flex-flow: row wrap;   
     align-items: center;
     justify-content: space-between;      
 }
 .header__logo { 
-    height: 150px;      
-    }
+    height: 120px;      
+}
 
 nav ul li { 
     list-style: none;
     display: flex;
-    font-size: 30px;
-    display: inline;
-    ;   
+    font-size: 20px;
+    display: inline;       
 }
 
 nav ul li a { 
@@ -46,7 +76,7 @@ nav ul li a {
     text-decoration: none;
     margin: 0 10px;
 }
-/* transición menú */
+/* transición menú */   
 
 nav ul li a:hover { 
     font-weight: bold;
@@ -60,24 +90,13 @@ nav ul li a:hover {
 .main__principal {
     grid-area: main; 
 }
-.título { 
-    color: rgb(219, 13, 13);
-    height: 50px;
-    margin: 20px;   
-}
-
-.vinos__andinos { 
-    font-size: 100px;
-    padding: 80px;
-    display: flex;
-    justify-content: center;
- }
 
 /*bloques texto*/
 .section__principal { 
     background-image: linear-gradient(to bottom, cornsilk, #F7EE94);
+    height: 580px;
     line-height: 1.6;
-    width: 450px;
+    width: 550px;
     margin: 40px;
     padding: 50px;
     grid-area: section;
@@ -85,49 +104,44 @@ nav ul li a:hover {
 
 /*página Nosotros*/
 .título__nosotros { 
-    color: brown;
+    color: #A56CBC;
     grid-area: main;
     font-size: 50px;
     margin: 20px;
 }
 
 .foto__andres { /*imagen nosotros*/
-    height: 400px;
+    height: 550px;
     padding: 100px;
     grid-area: aside;  
-    }
+}
 
 /*página Vinos*/
-.alfil__vino {  
-    height: 500px;
-    margin: 100px;
-    
-}
-.losdragones__vino { 
-    height: 500px;
-    margin: 100px;
-    
+
+.padre__vinos {
+    grid: main;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
 }
 
 /*página Finca*/
 .foto__viñedo { 
-    height: 400px;
+    height: 600px;
     padding: 100px;
     grid-area: aside;       
     }
 
 /*página Contacto*/
 .contacto { 
-    border: solid 2px gray;
-    padding: 50px;
- }
-
-label { 
-    display: block;
-    }
+    padding: 50px;        
+}
 
 /*FOOTER*/
 .footer__principal {
+    padding-top: 50px;
+    background-color: black;
+    color: white;
     grid-area: footer;
     height: 200px;
     display: flex;
@@ -136,11 +150,141 @@ label {
     text-align: center;
 }
 
-@media screen and (max-width: 400px) {
-    body {
+@media only screen and (max-width: 768px) {
+    /* body {
         background-image: url(../media/FONDO\ mobile.jpg);        
+    } */
+    .container__principal {
+        display: grid;
+        background-image: url(../media/fondo.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        
+        grid-template-rows: 200px 200px 500px 400px 200px;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "section section section"
+        "foto foto foto"
+        "footer footer footer";
+        font-family: 'charter';        
+    }    
+    .container__vinos {
+        display: grid;
+        background-image: url(../media/fondo.png);
+        background-repeat: no-repeat;
+        background-size: cover;    
+        grid-template-rows: 200px 800px 200px;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        font-family: 'charter';
     }
-  
+    .container__contacto {
+            
+        background-image: url(../media/fondo.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        font-family: 'charter';
+    }
+    /*menú y logo*/
+    .header__principal {
+        display: flex;
+        grid-area: header;
+        flex-direction: row;   
+        justify-content: space-between;      
+    }
+    .header__logo { 
+        height: 150px;      
+    }
+      /* transición menú */
+    
+    nav ul li a:hover { 
+        font-weight: bold;
+    }
+    
+    .hijo__nav {
+        justify-content: space-between;
+    } */
+    
+    /*nombre*/
+    .main__principal {
+        grid-area: main; 
+    }
+    .título { 
+        color: rgb(219, 13, 13);
+        height: 30px;
+        margin: 20px;   
+    }
+         
+    /*bloques texto*/
+    .section__principal { 
+        background-image: linear-gradient(to bottom, cornsilk, #F7EE94);
+        height: 500px;
+        line-height: 1.6;
+        width: 550px;
+        margin: 30px;
+        padding: 30px;            
+    }
+    
+    /*página Nosotros*/
+    .título__nosotros { 
+        color: brown;
+        grid-area: main;
+        font-size: 40px;
+        margin: 20px;
+    }
+    
+    .foto__andres { /*imagen nosotros*/
+        height: 350px;
+        padding: 30px;
+        grid-area: foto;
+    }
+    
+    /*página Vinos*/
+    .padre__vinos {
+        grid: main;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-content: stretch;
+    }
+        
+    /*página Finca*/
+    .foto__viñedo { 
+        height: 380px;
+        padding: 50px;
+        grid-area: foto;       
+    }
+    
+    /*página Contacto*/
+    .contacto { 
+    /*  border: solid 2px gray; */
+        padding: 50px;            
+    }
+    
+    label { 
+    /* display: block; */
+    }
+    
+    /*FOOTER*/
+    .footer__principal {
+        padding-top: 50px;
+        background-color: black;
+        color: white;
+        grid-area: footer;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        text-align: center;
+    }
 }
+
+
+
   
 

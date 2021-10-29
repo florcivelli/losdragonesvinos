@@ -12,35 +12,44 @@
     <title>Contacto - Los Dragones</title>
     <meta name="description" content="Escribinos...">
     <meta name="keywords" content="vinos andinos, barreal, valle de calingasta, andres biscaisaque, alfil, los dragones, finca, viñedos, contacto">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
-<body class="container__principal">
+<body class="container__contacto">
 
     <header class="header__principal">
-        <div>
-            <a href="../index.html">
-            <img src="../media/logo dragones fondo negro.png" alt="Logo" class="header__logo">
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="./finca.html">Finca</a>
-                </li>
-                <li>
-                    <a href="./vinos.html">Vinos</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
-
-            </ul>
-         </nav>
+        <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <img src="../media/logo dragones fondo negro.png" alt="Logo" class="header__logo"> 
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../paginas/nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../paginas/finca.html">Finca</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../paginas/vinos.html">Vinos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../paginas/contacto.html">Contacto</a>
+                    </li>
+                </div>
+              </div>
+            </div>
+          </nav>
     </header>
     
     <main class="main__contacto">
